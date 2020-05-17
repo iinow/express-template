@@ -1,5 +1,5 @@
 import express from 'express'
-import { apiVersion } from "~/common/decorator";
+import { apiVersion } from '~/common/decorator'
 
 let router = express.Router()
 
@@ -9,6 +9,4 @@ router.get('/', (req, res) => {
   })
 })
 
-export {
-  router
-}
+export default router

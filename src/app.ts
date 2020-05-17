@@ -1,10 +1,11 @@
 import express from 'express'
-import { router } from '~/routes/user'
+import * as Routers from '~/routes'
+import './test'
 
 let app = express()
 
-app.listen(7711, () => {
-  console.log('server listen!!')
+app.listen(process.env.serverPort, () => {
+  console.log(`server listen!!, port: ${process.env.serverPort}`)
 })
 
-app.use('/users', router)
+app.use('/users', Routers.User)

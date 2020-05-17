@@ -1,9 +1,9 @@
-const {smart} = require('webpack-merge')
-const webpack = require('webpack')
-const path = require('path')
+import { smart } from 'webpack-merge'
+import webpack from 'webpack'
+import path from 'path'
 const nodeExternals = require('webpack-node-externals')
 
-const config = smart({
+const config: webpack.Configuration = smart({
   name: 'server',
   mode: 'none',
   entry: {
@@ -35,4 +35,10 @@ const config = smart({
   devtool: 'inline-source-map'
 })
 
-module.exports = config
+export interface Env {
+  serverPort: number
+}
+
+export {
+  config as baseConfig
+}

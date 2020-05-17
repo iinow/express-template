@@ -1,6 +1,7 @@
-const baseConfig = require('./webpack.base.config')
-const { smart } = require('webpack-merge')
-const webpack = require('webpack')
+import { Env, baseConfig } from './webpack.base.config'
+import { smart } from 'webpack-merge'
+import webpack from 'webpack'
+const NodemonPlugin = require('nodemon-webpack-plugin')
 
 const config = smart({
   mode: 'production',
