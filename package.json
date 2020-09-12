@@ -14,11 +14,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@apollo/client": "^3.1.5",
+    "chance": "^1.1.7",
     "cross-env": "^7.0.2",
     "express": "^4.17.1",
+    "express-graphql": "^0.11.0",
+    "graphql": "^15.3.0",
     "lodash-es": "^4.17.15"
   },
   "devDependencies": {
+    "@types/chance": "^1.1.0",
     "@types/express": "^4.17.6",
     "@types/node": "^14.0.1",
     "@types/webpack": "^4.41.13",
